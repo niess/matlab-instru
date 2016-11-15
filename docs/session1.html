@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>1er pas en Matlab (1)</title>
+    <title>Initiation &#224; Matlab (1)</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <style type="text/css">
       @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
@@ -22,7 +22,10 @@
 class: center, middle
 
 # Initiation à Matlab
-[Disponible en ligne](https://niess.github.io/matlab-instru/)
+
+Disponible en ligne depuis
+
+[https://niess.github.io/matlab-instru/](https://niess.github.io/matlab-instru/)
 
 ## Session 1
 
@@ -32,7 +35,27 @@ _Novembre 2016_
 
 ---
 
-# C'est quoi Matlab?
+# Objectifs de ce TD
+
+* Matlab a une __syntaxe intuitive__ qui se prête bien à un apprentissage par
+l’usage. Les objectifs de cette première session de TD sont de :
+
+  * se familiariser avec la _manipulation de tableaux_ de données, objet de base
+    en Matlab.
+
+  * s’habituer à utiliser [l’aide en ligne](#aide).
+
+  * [lire](#lire) et [sauvegarder](#sauvegarder) des données.
+
+* Ce document est jallonné de __questions__, _`Q%:`_, vous proposant des pistes
+  de reflexion. Les [réponses](#questions) sont disponibles à la fin.
+
+* Des __exercices__ vous sont également proposé afin d'illustrer les différentes
+  notions discutées.
+
+---
+
+# _Q1: C'est quoi Matlab?_
 
 1. __MAT__rix __LAB__oratory : un laboratoire financé par Holywood pour la
 réalisation du film Matrix ?
@@ -51,20 +74,6 @@ réalisation du film Matrix ?
   trouver le bon outil dans sa boîte.
   * _Si un code Matlab devient complexe c’est que ce n’est probablement pas la
     langage le mieux adapté pour ce cas de figure._
-
----
-
-# Objectifs de ce TD
-
-* Matlab a une __syntaxe intuitive__ qui se prête bien à un apprentissage par
-l’usage. Les objectifs de cette première session de TD sont de :
-
-  * se familiariser avec la _manipulation de tableaux_ de données, objet de base
-    en Matlab.
-
-  * s’habituer à utiliser [l’aide en ligne](#aide).
-
-  * [lire](#lire) et [sauvegarder](#sauvegarder) des données.
 
 ---
 
@@ -130,12 +139,11 @@ malheureux ou non?
   ```matlab
   >> 2 * ans &#8629;
   ```
-  Qu’obtenez-vous? Que vaux `ans` maintenant? Tapez simplement `ans`, puis
-  &#8629;, pour vérifier.
+  _Q2: Qu’obtenez-vous? Que vaux `ans` maintenant? Tapez simplement `ans`, puis
+  &#8629;, pour vérifier._
 
 * Pour _enregistrer_ le résultat dans une autre variable il suffit d’utiliser
-  __l’opérateur d’affectation__, `=`. Par exemple, pour enregistrer le résultat
-  dans la variable nommée `somme`:
+  __l’opérateur d’affectation__, `=`. Par exemple:
   ```matlab
   >> somme = 1 + 1 &#8629;
 
@@ -224,7 +232,7 @@ _Vie et mort des variables_
   ```
   est un tableau de taille `4x3`.
 
-  * _Que renvoie `[v, M]`? Pourquoi?_
+  _Q3: Que renvoie `[v, M]`? Pourquoi?_
 
 * Il est parfois utile de déclarer un tableau vide, auquel on ajoutera des
   éléments par la suite. La syntaxe est:
@@ -284,7 +292,8 @@ et convergeant vers le nombre d'or, &phi;.
 * La quasi totalité des fonctions de Matlab sont conçues pour _opérer sur des
   tableaux_. Ainsi les fonctions mathématiques tel que : `exp` , `log`, `sqrt`
   et `abs` s’appliquent élément par élément.
-  * _Que renvoie Matlab pour sqrt([1, 4, 9])_?
+
+  _Q4: Que renvoie Matlab pour sqrt([1, 4, 9])_?
 
 * par contre, les opérateurs élémentaires `+`, `-` , `*`, `/` et `^`
   s’appliquent au __sens des matrices__. Les dimensions des tableaux devant
@@ -401,7 +410,8 @@ _Help! I need some function!_
 * Les opérations et fonctions mathématiques définies pour des entiers ou des
   réels sont également applicables aux chaînes de caractères. Le résultat
   étant un tableau de réels.
-  * _Que renvoient les operations suivantes? pourquoi?_
+
+  _Q5: Que renvoient les operations suivantes? pourquoi?_
 
     ```matlab
     >> '1' + 1
@@ -471,7 +481,7 @@ _Help! I need some function!_
   ```
   renvoît les deux _derniers éléments_ du vecteur `v`.
 
-  * _Comparez_ `v([1, end])` _et_ `v(1:end)`. _Quelle est la différence?
+  _Q6: Comparez_ `v([1, end])` _et_ `v(1:end)`. _Quelle est la différence?
   Pourquoi?_
 
 ---
@@ -509,12 +519,13 @@ _Help! I need some function!_
 
 * Un exemple de proposition logique est la comparaison du contenu de deux
   tableaux. Le __test d’égalité__ se fait avec _l’opérateur de comparaison_
-  `==`. Attention à ne pas le confondre avec l’operateur d’affectation `=`. Par
-  exemple que renvoie :
+  `==`. Attention à ne pas le confondre avec l’operateur d’affectation `=`.
+
+  _Q7: que renvoie_ :
   ```matlab
   >> 1:3 == [2, 2, 2]
   ```
-  Quel est le type du résultat? Notez que la comparaison est faite terme à
+  _Quel est le type du résultat?_ Notez que la comparaison est faite terme à
   terme selon l’ordre des indices.
 
 ---
@@ -643,6 +654,52 @@ name:lire
 
   En l’absence d’assignation, une table contenant les données et portant le
   nom du fichier sans l’extension, sera créé dans l’espace de travail.
+
+---
+
+class: center, middle
+name:questions
+
+# Réponses aux questions
+
+---
+
+# Réponses aux questions
+
+* Q1: C’est quoi Matlab?
+  * Il fallait répondre 2 et 3. Matlab n’a pas de rapport avec le film Matrix.
+    Par contre l'acronyme signifie bien __MAT__rix __LAB__oratory.
+
+* Q2: Variables et affectation
+  * `ans * 2` renvoie 4. En l’absence d’affectation explicite, le résultat
+    est sauvé dans `ans` de nouveau . Donc `ans` vaut 4 maintenant.
+
+* Q3: Déclaration d’un tableau par blocs
+  * `[v, M]` donne une erreur de concaténation car v et M n’ont pas le même
+    nombre de lignes .
+
+* Q4: Arithmétique avec des tableaux
+  * `sqrt ([1, 4, 9])` donne le tableau `[1, 2, 3]`. La racine carrée est
+    appliquée à chaque élément du tableau de départ.
+
+---
+
+# Réponses aux questions
+
+* Q5: Conversion de type et manipulation des chaînes de caractères
+  * `'1' + 1` renvoie le nombre 50 car le code ASCII correspondant au caractère
+    ``'1'`` est 49. Par contre `char('1'+1)` renvoie le caractère de code ASCII
+    50, soit le caractère `'2'`. Les caractères `'0'`, `'1'`, ... à `'9'` se
+    suivent. Il en est de même pour les caractères de l’alphabet.
+
+* Q6: Selection d'un sous-tableau ... #1
+  * `v([1, end])` renvoie le 1<sup>er</sup> et le dernier élément du vecteur `v`
+    alors que `v(1:end)` renvoie tous les éléments de `v`. Sauf pour un vecteur
+    de 2 éléments le résultat est différent.
+
+* Q7: Propositions logiques et indexation ... # 1
+  * Le résultat de `1:3 == [2, 2, 2]` est le tableau logique `[0, 1, 0]`. Seul
+    le 2<sup>ème</sup> élément est le même dans les deux tableaux comparés.
 
 
     </textarea>

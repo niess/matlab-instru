@@ -12,5 +12,7 @@ def make_slides(title, template, body, output):
 
 if __name__ == "__main__":
     template = "remark/template.html"
-    make_slides("1er pas en Matlab (1)", template, "docs/session1.md",
+    make_slides("Initiation &#224; Matlab (1)", template, "docs/session1.md",
         "docs/session1.html")
+    make_slides("Initiation &#224; Matlab (1)", template, "docs/reponses1.md",
+        "docs/reponses1.html")
