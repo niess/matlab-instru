@@ -1,12 +1,17 @@
 #!/usr/bin/env python
+import locale
+locale.setlocale(locale.LC_TIME,'')
+import time
 
-def make_slides(title, template, body, output):
+def make_slides(title, template, content, output):
     with open(template, "r") as f:
         template = f.read()
-    text = template.replace("[TITLE]", title)
-    with open(body, "r") as f:
-        body = f.read()
-    text = text.replace("[BODY]", body)
+    text = template.replace("{{title}}", title)
+    with open(content, "r") as f:
+        content = f.read()
+    now = time.strftime('%A %d/%m/%Y')
+    content = content.replace("{{now}}", now)
+    text = text.replace("{{content}}", content)
     with open(output, "w+") as f:
         f.write(text)
 

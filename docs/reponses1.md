@@ -8,7 +8,7 @@ Disponible en ligne depuis
 
 _V. Niess_
 
-_Novembre 2016_
+_{{now}}_
 
 ---
 
