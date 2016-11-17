@@ -14,6 +14,19 @@
         font-weight: normal;
       }
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .question
+      {
+        border-left: 4px solid #0C0;
+        padding-left: 12px;
+      }
+
+      blockquote
+      {
+        margin-left: 0px;
+        border-left: 4px solid #C00;
+        padding-left: 12px;
+      }
+
     </style>
   </head>
   <body>
@@ -31,7 +44,7 @@ Disponible en ligne depuis
 
 _V. Niess_
 
-_mercredi 16/11/2016_
+_jeudi 17/11/2016_
 
 ---
 
@@ -47,15 +60,16 @@ l’usage. Les objectifs de cette première session de TD sont de :
 
   * [lire](#lire) et [sauvegarder](#sauvegarder) des données.
 
-* Ce document est jallonné de __questions__, _`Q%:`_, vous proposant des pistes
-  de reflexion. Les [réponses](#questions) sont disponibles à la fin.
+* Ce document est jallonné de __questions__, ( .question[_Q%:_ ...] ), vous
+  proposant des pistes de reflexion. Les [réponses](#questions) sont disponibles
+  à la fin.
 
 * Des __exercices__ vous sont également proposé afin d'illustrer les différentes
   notions discutées.
 
 ---
 
-# _Q1: C'est quoi Matlab?_
+# .question[_Q1: C'est quoi Matlab?_]
 
 1. __MAT__rix __LAB__oratory : un laboratoire financé par Holywood pour la
 réalisation du film Matrix ?
@@ -139,8 +153,8 @@ malheureux ou non?
   ```matlab
   >> 2 * ans &#8629;
   ```
-  _Q2: Qu’obtenez-vous? Que vaux `ans` maintenant? Tapez simplement `ans`, puis
-  &#8629;, pour vérifier._
+  .question[_Q2: Qu’obtenez-vous? Que vaux_ `ans` _maintenant? Tapez simplement_
+  `ans`_, puis_ &#8629;_, pour vérifier._]
 
 * Pour _enregistrer_ le résultat dans une autre variable il suffit d’utiliser
   __l’opérateur d’affectation__, `=`. Par exemple:
@@ -232,7 +246,7 @@ _Vie et mort des variables_
   ```
   est un tableau de taille `4x3`.
 
-  _Q3: Que renvoie `[v, M]`? Pourquoi?_
+  .question[_Q3: Que renvoie_ `[v, M]`_? Pourquoi?_]
 
 * Il est parfois utile de déclarer un tableau vide, auquel on ajoutera des
   éléments par la suite. La syntaxe est:
@@ -293,7 +307,7 @@ et convergeant vers le nombre d'or, &phi;.
   tableaux_. Ainsi les fonctions mathématiques tel que : `exp` , `log`, `sqrt`
   et `abs` s’appliquent élément par élément.
 
-  _Q4: Que renvoie Matlab pour sqrt([1, 4, 9])_?
+  .question[_Q4: Que renvoie Matlab pour_ `sqrt([1, 4, 9])`_?_]
 
 * par contre, les opérateurs élémentaires `+`, `-` , `*`, `/` et `^`
   s’appliquent au __sens des matrices__. Les dimensions des tableaux devant
@@ -411,7 +425,7 @@ _Help! I need some function!_
   réels sont également applicables aux chaînes de caractères. Le résultat
   étant un tableau de réels.
 
-  _Q5: Que renvoient les operations suivantes? pourquoi?_
+  .question[_Q5: Que renvoient les operations suivantes? pourquoi?_]
 
     ```matlab
     >> '1' + 1
@@ -481,8 +495,8 @@ _Help! I need some function!_
   ```
   renvoît les deux _derniers éléments_ du vecteur `v`.
 
-  _Q6: Comparez_ `v([1, end])` _et_ `v(1:end)`. _Quelle est la différence?
-  Pourquoi?_
+  .question[_Q6: Comparez_ `v([1, end])` _et_ `v(1:end)`. _Quelle est la
+  différence? Pourquoi?_]
 
 ---
 
@@ -521,12 +535,12 @@ _Help! I need some function!_
   tableaux. Le __test d’égalité__ se fait avec _l’opérateur de comparaison_
   `==`. Attention à ne pas le confondre avec l’operateur d’affectation `=`.
 
-  _Q7: que renvoie_ :
+  .question[_Q7: que renvoie_ :
   ```matlab
   >> 1:3 == [2, 2, 2]
   ```
-  _Quel est le type du résultat?_ Notez que la comparaison est faite terme à
-  terme selon l’ordre des indices.
+  _Quel est le type du résultat?_]
+  Notez que la comparaison est faite terme à terme selon l’ordre des indices.
 
 ---
 
@@ -546,7 +560,7 @@ l’aide en ligne suivante :
   ```matlab
   >> A(A >= 0)
   ```
-  sélectionne tous les éléments de ̀`A` qui sont positifs ou nuls.
+  sélectionne tous les éléments de  `A` qui sont positifs ou nuls.
 
 * La fonction `find` renvoie les indices non nuls d’un tableau. Elle permet
   ainsi de _convertir un tableau logique en un tableau d’indices_.

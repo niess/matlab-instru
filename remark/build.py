@@ -21,3 +21,5 @@ if __name__ == "__main__":
         "docs/session1.html")
     make_slides("Initiation &#224; Matlab (1)", template, "docs/reponses1.md",
         "docs/reponses1.html")
+    make_slides("Initiation &#224; Matlab (2)", template, "docs/session2.md",
+        "docs/session2.html")
