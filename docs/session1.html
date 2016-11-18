@@ -19,11 +19,27 @@
         border-left: 4px solid #0C0;
         padding-left: 12px;
       }
+      .warning
+      {
+        border-left: 4px solid #C00;
+        padding-left: 12px;
+      }
+      .big { font-size: 28px; }
+
+      table {
+        border-collapse: separate;
+        border-spacing: 30px 0;
+      }
+
+      td  {
+        padding: 3px 0;
+      }
 
       blockquote
       {
+        color: #777;
         margin-left: 0px;
-        border-left: 4px solid #C00;
+        border-left: 4px solid #AAA;
         padding-left: 12px;
       }
 
@@ -44,7 +60,7 @@ Disponible en ligne depuis
 
 _V. Niess_
 
-_jeudi 17/11/2016_
+_dimanche 20/11/2016_
 
 ---
 
@@ -495,7 +511,7 @@ _Help! I need some function!_
   ```
   renvoît les deux _derniers éléments_ du vecteur `v`.
 
-  .question[_Q6: Comparez_ `v([1, end])` _et_ `v(1:end)`. _Quelle est la
+  .question[_Q6: Comparez_ `v(1, end)` _et_ `v(1:end)`. _Quelle est la
   différence? Pourquoi?_]
 
 ---
@@ -678,7 +694,7 @@ name:questions
 
 ---
 
-# Réponses aux questions
+# Réponses aux questions #1
 
 * Q1: C’est quoi Matlab?
   * Il fallait répondre 2 et 3. Matlab n’a pas de rapport avec le film Matrix.
@@ -698,7 +714,7 @@ name:questions
 
 ---
 
-# Réponses aux questions
+# Réponses aux questions #2
 
 * Q5: Conversion de type et manipulation des chaînes de caractères
   * `'1' + 1` renvoie le nombre 50 car le code ASCII correspondant au caractère
@@ -707,7 +723,7 @@ name:questions
     suivent. Il en est de même pour les caractères de l’alphabet.
 
 * Q6: Selection d'un sous-tableau ... #1
-  * `v([1, end])` renvoie le 1<sup>er</sup> et le dernier élément du vecteur `v`
+  * `v(1, end)` renvoie le 1<sup>er</sup> et le dernier élément du vecteur `v`
     alors que `v(1:end)` renvoie tous les éléments de `v`. Sauf pour un vecteur
     de 2 éléments le résultat est différent.
 
@@ -720,13 +736,18 @@ name:questions
     <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript"></script>
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
     <script type="text/javascript">
-     var slideshow = remark.create();
+     var slideshow = remark.create({
+        highlightStyle: 'default',
+        highlightLanguage: 'remark',
+        highlightLines: true
+     });
 
      // Setup MathJax
      MathJax.Hub.Config({
          tex2jax: {
          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-         }
+         },
+         "HTML-CSS": {scale: 80 }
      });
      MathJax.Hub.Queue(function() {
          $(MathJax.Hub.getAllJax()).map(function(index, elem) {

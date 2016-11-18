@@ -459,7 +459,7 @@ _Help! I need some function!_
   ```
   renvoît les deux _derniers éléments_ du vecteur `v`.
 
-  .question[_Q6: Comparez_ `v([1, end])` _et_ `v(1:end)`. _Quelle est la
+  .question[_Q6: Comparez_ `v(1, end)` _et_ `v(1:end)`. _Quelle est la
   différence? Pourquoi?_]
 
 ---
@@ -642,7 +642,7 @@ name:questions
 
 ---
 
-# Réponses aux questions
+# Réponses aux questions #1
 
 * Q1: C’est quoi Matlab?
   * Il fallait répondre 2 et 3. Matlab n’a pas de rapport avec le film Matrix.
@@ -662,7 +662,7 @@ name:questions
 
 ---
 
-# Réponses aux questions
+# Réponses aux questions #2
 
 * Q5: Conversion de type et manipulation des chaînes de caractères
   * `'1' + 1` renvoie le nombre 50 car le code ASCII correspondant au caractère
@@ -671,7 +671,7 @@ name:questions
     suivent. Il en est de même pour les caractères de l’alphabet.
 
 * Q6: Selection d'un sous-tableau ... #1
-  * `v([1, end])` renvoie le 1<sup>er</sup> et le dernier élément du vecteur `v`
+  * `v(1, end)` renvoie le 1<sup>er</sup> et le dernier élément du vecteur `v`
     alors que `v(1:end)` renvoie tous les éléments de `v`. Sauf pour un vecteur
     de 2 éléments le résultat est différent.
 
