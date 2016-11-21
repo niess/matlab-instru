@@ -6,4 +6,6 @@ Ce projet regroupe différents
 à l'utilisation de Matlab pour leurs projets d'instrumentation.
 
 Le cours se déroule en deux sessions de TD sur machines, de 2 x 2h,
-en semie-autonomie.
+en semie-autonomie. Les transparents ont été réalisés avec
+[remark](https://remarkjs.com). Ils sont prévues pour être visionés avec un
+navigateur internet, e.g. `Firefox` ou `Chrome`.
